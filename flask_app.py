@@ -91,7 +91,7 @@ def send_simple_message(to, subject, newUser):
 
     email_log = SentEmail(
         sender=app.config['API_FROM'],
-        recipients=to,
+        recipients=str(to),
         subject=app.config['FLASKY_MAIL_SUBJECT_PREFIX'] + ' ' + subject,
         body="Novo usuário cadastrado no sistema do Gustavo de Oliveira Martins PT3031772: " + newUser
     )
